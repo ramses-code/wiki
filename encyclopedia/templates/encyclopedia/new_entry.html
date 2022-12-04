@@ -7,12 +7,12 @@
 {% block body %}
     <h1>Create New Page</h1>
     
-    <form action={% url 'new_entry' %} method="post">
+    <form action="{% url 'new_entry' %}" method="post">
         {% csrf_token %}
         <input type="text" name="title" placeholder="Title">
         <p></p>
         <textarea id="content" name="content" placeholder="Enter Markdown content..."></textarea>
         <br>
-        <input type="submit" value="Save">
+        <input type="submit" value="Save" class="btn btn-secondary">
     </form>
 {% endblock %}
